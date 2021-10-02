@@ -1,0 +1,20 @@
+[package]
+name = "try-aya"
+version = "0.1.0"
+edition = "2018"
+publish = false
+
+[dependencies]
+aya = { git = "https://github.com/aya-rs/aya", branch="main" }
+aya-log = { git = "https://github.com/aya-rs/aya-log", branch = "main" }
+simplelog = "0.10.2"
+tokio = { version = "1.12", features=["full"] }
+try-aya-common = { path = "../try-aya-common", features=["userspace"] }
+anyhow = "1.0.42"
+ctrlc = "3.2"
+
+structopt = { version = "0.3"}
+
+[[bin]]
+name = "try-aya"
+path = "src/main.rs"
